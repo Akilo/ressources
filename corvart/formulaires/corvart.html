@@ -1,0 +1,18 @@
+#CACHE{0}
+<div class="formulaire_spip formulaire_#ENV{form}[ formulaire_#ENV{form}-(#ENV{id,nouveau})]">
+	[<p class="reponse_formulaire reponse_formulaire_ok">(#ENV*{message_ok})</p>]
+	[<p class="reponse_formulaire reponse_formulaire_erreur">(#ENV*{message_erreur})</p>]
+	
+	<form method="post" action="#ENV{action}"><div>
+		[(#REM) declarer les hidden qui declencheront le service du formulaire 
+		parametre : url d'action ]
+		#ACTION_FORMULAIRE{#ENV{action}}
+        <ul>
+            <li>
+	            <label for="valider_lecture"><:corvart:valider_lecture:></label>
+	            <input type="checkbox" class="checkbox" name="valider_lecture" id="valider_lecture"[(#ENV{valider_lecture}|oui) checked="checked"] value="true" />
+            </li>
+                <input type="submit" class="submit" value="<:corvart:confirmer:>" />
+        </ul>
+    </div></form>
+</div>
