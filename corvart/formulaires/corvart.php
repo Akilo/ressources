@@ -24,7 +24,7 @@ function formulaires_corvart_verifier($objet, $id_objet,$id_auteur=null){
     
 
     if ($lu != "true") {
-        $erreur['valider_lecture'] = "Vous n'avez pas valider ce formulaire";
+        $erreur['valider_lecture'] = "Vous n'avez pas validé ce formulaire";
     }	
 
     if (!$id_auteur) {
